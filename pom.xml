@@ -152,7 +152,7 @@
 			</plugin>
 		</plugins>
 	</build>
-<!--	
+	
 	<repositories>
 		<repository>
 			<id>archiva.internal</id>
@@ -165,7 +165,7 @@
 			<url>http://cpswtng_archiva:8080/repository/snapshots/</url>
 		</repository>
 	</repositories>
--->
+
 	<pluginRepositories>
 		<pluginRepository>
 			<id>archiva.internal</id>
