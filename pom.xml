@@ -239,7 +239,7 @@
 								<argument>0.1</argument>
 								<argument>--realtime</argument>
 								<argument>--federationEndTime</argument>
-								<argument>25.0</argument>
+								<argument>0</argument>
 								<argument>--seed4DurRNG</argument>
 								<argument>0</argument>
 								<argument>--lockfile</argument>
@@ -355,7 +355,7 @@
 						<version>1.4.0</version>
 						<configuration>
 							<workingDirectory>${project.basedir}/target/bin-exec</workingDirectory>
-							<executable>./${federation.name}-${federate.name}-cpp</executable>
+							<executable>./TripleIFederation-${federate.name}-cpp</executable>
 							<arguments>
 								<argument>${federation.name}</argument>
 								<argument>${federate.name}</argument>
