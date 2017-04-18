@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.webgme.guest</groupId>
-	<artifactId>TripleIFederation_exec</artifactId>
+	<artifactId>TripleSendFederation_exec</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<properties>
-		<federation.name>TripleIFederation</federation.name>
+		<federation.name>TripleFederation</federation.name>
 		<federation.version>0.0.1-SNAPSHOT</federation.version>
 		<c2w.version>0.3.0-SNAPSHOT</c2w.version>
 		<nar.version>3.3.0</nar.version>
@@ -16,13 +16,13 @@
  
 		<dependency>
 			<groupId>org.webgme.guest</groupId>
-			<artifactId>TripleIFederation</artifactId>
+			<artifactId>TripleSendFederation</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.webgme.guest</groupId>
-			<artifactId>TripleIFederation-base-java</artifactId>
+			<artifactId>TripleSendFederation-base-java</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
@@ -194,13 +194,6 @@
 
 	<profiles>
 		<profile>
-			<id>TripleReceive</id>
-			<properties>
-				<federate.name>TripleReceive</federate.name>
-				<federate.loglevel>NORMAL</federate.loglevel>
-			</properties>
-		</profile>
-		<profile>
 			<id>TripleSend</id>
 			<properties>
 				<federate.name>TripleSend</federate.name>
@@ -251,8 +244,8 @@
 								<argument>0</argument>
 								<argument>--lockfile</argument>
 								<argument>/home/vagrant/Projects/cpswt/__lock__</argument>
-								<argument>TripleIFederation</argument>
-								<argument>${project.basedir}/target/classes/TripleIFederation.fed</argument>
+								<argument>${federation.name}</argument>
+								<argument>${project.basedir}/target/classes/TripleFederation.fed</argument>
 								<argument>${project.basedir}/target/classes/default/script.xml</argument>
 								<argument>TripleIFederation_main-Deployment1_100</argument>
 								<argument>NORMAL</argument>
@@ -292,7 +285,7 @@
 								<!-- automatically creates the classpath using all project dependencies, 
 									also adding the project build directory -->
 								<classpath />
-								<argument>TripleIFederation.${federate.name}</argument>
+								<argument>${federation.name}.${federate.name}</argument>
 								<argument>${federation.name}</argument>
 								<argument>${federate.name}</argument>
 								<argument>${federate.loglevel}</argument>
@@ -362,7 +355,7 @@
 						<version>1.4.0</version>
 						<configuration>
 							<workingDirectory>${project.basedir}/target/bin-exec</workingDirectory>
-							<executable>./TripleIFederation-${federate.name}-cpp</executable>
+							<executable>./${federation.name}-${federate.name}-cpp</executable>
 							<arguments>
 								<argument>${federation.name}</argument>
 								<argument>${federate.name}</argument>
