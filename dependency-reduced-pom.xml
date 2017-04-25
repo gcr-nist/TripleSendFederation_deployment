@@ -149,7 +149,7 @@
                 <argument>0.1</argument>
                 <argument>--realtime</argument>
                 <argument>--federationEndTime</argument>
-                <argument>25.0</argument>
+                <argument>0</argument>
                 <argument>--seed4DurRNG</argument>
                 <argument>0</argument>
                 <argument>--lockfile</argument>
